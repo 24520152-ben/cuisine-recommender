@@ -1,9 +1,11 @@
 import streamlit as st
 import requests
 import json
+import os
 
 API_URL = 'https://cuisine-recommender-j53r.onrender.com/predict'
-INGREDIENTS_PATH = '../data/ingredients.json'
+CUR_DIR = os.path.dirname(__file__)
+INGREDIENTS_PATH = os.path.join(CUR_DIR, '..', 'data', 'ingredients.json')
 
 st.set_page_config(page_title='CUISINE RECOMMENDER', layout='centered')
 
